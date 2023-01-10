@@ -24,7 +24,7 @@ namespace DevProfile.Application.Features.Projects.Command.CreateProject
                 .NotEmpty().WithMessage("{PropertyName} is required");
 
             RuleFor(p => p)
-                .MustAsync(ProjectNameUnique)
+                .MustAsync(ProjectNameUnique).WithMessage("Project name should be unique");
 
         }
 
