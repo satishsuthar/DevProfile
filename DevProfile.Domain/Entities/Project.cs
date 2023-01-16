@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevProfile.Domain.Entities
 {
-    public class Project : AuditableEntities
+    public class Project : AuditableEntity
     {
         public Guid ProjectId { get; set; }
         public string Name { get; set; }

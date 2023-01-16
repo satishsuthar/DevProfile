@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevProfile.Domain.Entities
 {
-    public class Experience : AuditableEntities
+    public class Experience : AuditableEntity
     {
         public Guid ExperienceId { get; set; }
         public string Company { get; set; } = string.Empty;

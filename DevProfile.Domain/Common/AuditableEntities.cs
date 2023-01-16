@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevProfile.Domain.Common
 {
-    public class AuditableEntities
+    public class AuditableEntity
     {
         public string? CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }

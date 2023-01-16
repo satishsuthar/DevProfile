@@ -23,7 +23,8 @@ namespace DevProfile.Application.Features.Projects.Command.DeleteProject
 
         public async Task<Unit> Handle(DeleteProjectCommand request, CancellationToken cancellationToken)
         {
-            await _projectRepository.DeleteAsync(request.ProjectId);
+            var projectToDelete = await _projectRepository.GetByIdAsync(request.ProjectId);
+            await _projectRepository.DeleteAsync(projectToDelete);
             return Unit.Value;
         }
     }
