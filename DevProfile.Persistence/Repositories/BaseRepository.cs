@@ -40,7 +40,7 @@ namespace DevProfile.Persistence.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             return await _context.SaveChangesAsync();
