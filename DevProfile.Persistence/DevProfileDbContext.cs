@@ -16,7 +16,7 @@ namespace DevProfile.Persistence
         {
         }
 
-        public DbSet<Experience> Expereiences { get; set; }
+        public DbSet<Experience> Experiences { get; set; }
         public DbSet<Project> Projects { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
